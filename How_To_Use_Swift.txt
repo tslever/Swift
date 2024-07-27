@@ -1,0 +1,6 @@
+Modify Visual Studio Community 2022 to include workload "Desktop development with C++".
+Install Swift.
+Install extension Swift in Visual Studio Code.
+In Visual Studio Code, create file `Hello_World.swift` with code `print("Hello, World!")`.
+In a terminal, run `swiftc Hello_World.swift`.
+Run `./Hello_World.exe`.
