@@ -326,3 +326,46 @@ class NamedShape {
         return "A shape with \(numberOfSides) sides"
     }
 }
+
+class Square: NamedShape {
+    var sideLength: Double
+
+    init(sideLength: Double, name: String) {
+        self.sideLength = sideLength
+        super.init(name: name)
+        numberOfSides = 4
+    }
+
+    func area() -> Double {
+        return sideLength * sideLength
+    }
+
+    override func simpleDescription() -> String {
+        return "A square with sides of length \(sideLength)"
+    }
+}
+let square: Square = Square(sideLength: 5.2, name: "my test square")
+print(square.area())
+print(square.simpleDescription())
+
+class Circle: NamedShape {
+    var radius: Double = 0
+
+    init(radius: Double, name: String) {
+        self.radius = radius
+        super.init(name: name)
+        numberOfSides = Int.max
+    }
+
+    func area() -> Double {
+        return Double.pi * radius * radius
+    }
+
+    override func simpleDescription() -> String {
+        return "A circle with radius of length \(radius)"
+    }
+}
+let circle: Circle = Circle(radius: 5.2, name: "my test circle")
+print(circle.area())
+print(circle.simpleDescription())
+
