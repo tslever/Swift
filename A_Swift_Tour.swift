@@ -99,7 +99,7 @@ print(greeting)
 let nickname: String? = nil
 let fullName: String = "John Appleseed"
 let informalGreeting: String = "Hi \(nickname ?? fullName)"
-if let nickname {
+if let nickname: String {
     print("Hey, \(nickname)")
 }
 
@@ -121,3 +121,29 @@ experiment = """
     ^
     error: fatalError
     """
+
+let interestingNumbers: [String: [Int]] = [
+    "Prime": [2, 3, 5, 7, 11, 13],
+    "Fibonacci": [1, 1, 2, 3, 5, 8],
+    "Square": [1, 4, 9, 16, 25]
+]
+var largest: Int = 0
+for (_, numbers) in interestingNumbers {
+    for number: Int in numbers {
+        if number > largest {
+            largest = number
+        }
+    }
+}
+print(largest)
+largest = 0
+var typeOfLargestNumber: String = "placeholder"
+for (typeOfNumber, numbers) in interestingNumbers {
+    for number: Int in numbers {
+        if number > largest {
+            typeOfLargestNumber = typeOfNumber
+            largest = number
+        }
+    }
+}
+print("The largest number was \(typeOfLargestNumber) \(largest).")
