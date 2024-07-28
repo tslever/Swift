@@ -281,3 +281,14 @@ mappedNumbers = numbers.map(
 print(mappedNumbers)
 let sortedNumbers: [Int] = numbers.sorted { $0 > $1 }
 print(sortedNumbers)
+
+class Shape {
+    var numberOfSides: Int = 0
+    func simpleDescription() -> String {
+        return "A shape with \(numberOfSides) sides"
+    }
+}
+var shape: Shape = Shape()
+shape.numberOfSides = 7
+var shapeDescription: String = shape.simpleDescription()
+print(shapeDescription)
