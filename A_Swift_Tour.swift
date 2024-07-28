@@ -13,7 +13,7 @@ let explicitDouble: Double = 70
 let label: String = "The width is "
 let width: Int = 94
 let widthLabel: String = label + String(width)
-let experiment_1: String = """
+var experiment: String = """
     Running `swiftc A_Swift_Tour.swift`
     when A_Swift_Tour.swift contains `let widthLabel: String = label + width`
     yields the following error.
@@ -102,3 +102,22 @@ let informalGreeting: String = "Hi \(nickname ?? fullName)"
 if let nickname {
     print("Hey, \(nickname)")
 }
+
+let vegetable: String = "red pepper"
+switch vegetable {
+    case "celery":
+        print("Add some raisins and make ants on a log.")
+    case "cucumber", "watercress":
+        print("That would make a good tea sandwich.")
+    case let x where x.hasSuffix("pepper"):
+        print("Is it a spicy \(x)?")
+    default:
+        print("Everything tastes good in soup.")
+}
+experiment = """
+    Excluding the default case in the switch statement above yields error message
+
+    switch vegetable {
+    ^
+    error: fatalError
+    """
