@@ -262,6 +262,19 @@ var mappedNumbers: [Int] = numbers.map(
 print(mappedNumbers)
 mappedNumbers = numbers.map(
     {
+        (number: Int) -> Int in
+            var result: Int = 0
+            if number % 2 == 1 {
+                result = 0
+            } else {
+                result = 3 * number
+            }
+            return result
+    }
+)
+print(mappedNumbers)
+mappedNumbers = numbers.map(
+    {
         number in 3 * number
     }
 )
