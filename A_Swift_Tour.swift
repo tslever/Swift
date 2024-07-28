@@ -193,3 +193,21 @@ func greet(_ person: String, on day: String) -> String {
 }
 print(greet(person: "Bob", day: "Tuesday"))
 print(greet("John", on: "Wednesday"))
+
+func calculateStatistics(scores: [Int]) -> (min: Int, max: Int, sum: Int) {
+    var min: Int = scores[0]
+    var max: Int = scores[0]
+    var sum: Int = 0
+    for score: Int in scores {
+        if score > max {
+            max = score
+        } else if score < min {
+            min = score
+        }
+        sum += score
+    }
+    return (min, max, sum)
+}
+let statistics: (min: Int, max: Int, sum: Int) = calculateStatistics(scores: [5, 3, 100, 3, 9])
+print(statistics.sum)
+print(statistics.2)
