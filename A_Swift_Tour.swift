@@ -30,7 +30,7 @@ let appleSummary: String = "I have \(apples) apples."
 let fruitSummary: String = "I have \(apples + oranges) pieces of fruit."
 let stringWithCalculation: String = "1.0 + 2.0 = \(1.0 + 2.0)."
 let name: String = "Tom"
-let greeting: String = "Hello, \(name)!"
+var greeting: String = "Hello, \(name)!"
 let quotation: String = """
     Indentation at the start of each quoted line is removed,
     as long as it matches the identation of the closing quotation marks.
@@ -73,3 +73,32 @@ let scoreDecoration: String = if teamScore > 10 {
     ""
 }
 print("Score: ", teamScore, scoreDecoration)
+
+var optionalString: String? = "Hello"
+print(optionalString == nil)
+var optionalName: String? = "John Appleseed"
+greeting = "Hello!"
+if let name: String = optionalName {
+    greeting = "Hello, \(name)"
+}
+optionalName = nil
+greeting = "Hello!"
+if let name: String = optionalName {
+    greeting = "Hello, \(name)"
+}
+print(greeting)
+optionalName = nil
+greeting = "Hello!"
+if let name: String = optionalName {
+    greeting = "Hello, \(name)"
+} else if optionalName == nil {
+    greeting = "Hello! I would like to know your name."
+}
+print(greeting)
+
+let nickname: String? = nil
+let fullName: String = "John Appleseed"
+let informalGreeting: String = "Hi \(nickname ?? fullName)"
+if let nickname {
+    print("Hey, \(nickname)")
+}
