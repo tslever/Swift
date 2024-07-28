@@ -213,7 +213,7 @@ print(statistics.sum)
 print(statistics.2)
 
 func returnFifteen() -> Int {
-    var y = 10
+    var y: Int = 10
     func add() {
         y += 5
     }
@@ -228,5 +228,19 @@ func makeIncrementer() -> ((Int) -> Int) {
     }
     return addOne
 }
-var increment = makeIncrementer()
+var increment: ((Int) -> Int) = makeIncrementer()
 print(increment(7))
+
+func hasAnyMatches(list: [Int], condition: (Int) -> Bool) -> Bool {
+    for item: Int in list {
+        if condition(item) {
+            return true
+        }
+    }
+    return false
+}
+func lessThanTen(number: Int) -> Bool {
+    return number < 10
+}
+var numbers: [Int] = [20, 19, 7, 12]
+print(hasAnyMatches(list: numbers, condition: lessThanTen))
