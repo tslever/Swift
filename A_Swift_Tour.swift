@@ -244,3 +244,27 @@ func lessThanTen(number: Int) -> Bool {
 }
 var numbers: [Int] = [20, 19, 7, 12]
 print(hasAnyMatches(list: numbers, condition: lessThanTen))
+
+/* Functions are actually a special case of closures:
+blocks of code that can be called later.
+The code in a closure has access to things like variables and functions
+that were available in the score where the closure was created,
+even if the closure is in a different scope when [the closure is] executed...
+You can write a closure without a name by surrounding code with braces...
+Use in to separate the arguments and return type from the body.*/
+var mappedNumbers: [Int] = numbers.map(
+    {
+        (number: Int) -> Int in
+            let result: Int = 3 * number
+            return result
+    }
+)
+print(mappedNumbers)
+mappedNumbers = numbers.map(
+    {
+        number in 3 * number
+    }
+)
+print(mappedNumbers)
+let sortedNumbers: [Int] = numbers.sorted { $0 > $1 }
+print(sortedNumbers)
