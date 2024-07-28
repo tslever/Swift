@@ -292,3 +292,26 @@ var shape: Shape = Shape()
 shape.numberOfSides = 7
 var shapeDescription: String = shape.simpleDescription()
 print(shapeDescription)
+
+class ImprovedShape {
+    var numberOfSides: Int = 0
+    let dictionaryOfNumbersOfSidesAndNames: [Int: String] = [
+        0: "nothing",
+        1: "line segment",
+        2: "path with two line segments",
+        3: "triangle",
+        4: "quadrilateral",
+        5: "pentagon"
+    ]
+    func setNumberOfSides(numberOfSidesToUse: Int) {
+        self.numberOfSides = numberOfSidesToUse
+    }
+    func simpleDescription() -> String {
+        let nameOfShape: String = dictionaryOfNumbersOfSidesAndNames[numberOfSides] ?? "unknown name of shape"
+        return "A shape with \(numberOfSides) sides is a \(nameOfShape)."
+    }
+}
+var improvedShape: ImprovedShape = ImprovedShape()
+improvedShape.setNumberOfSides(numberOfSidesToUse: 5)
+var improvedShapeDescription: String = improvedShape.simpleDescription()
+print(improvedShapeDescription)
