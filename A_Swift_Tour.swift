@@ -31,7 +31,7 @@ let fruitSummary: String = "I have \(apples + oranges) pieces of fruit."
 let stringWithCalculation: String = "1.0 + 2.0 = \(1.0 + 2.0)."
 let name: String = "Tom"
 let greeting: String = "Hello, \(name)!"
-let quotation = """
+let quotation: String = """
     Indentation at the start of each quoted line is removed,
     as long as it matches the identation of the closing quotation marks.
 
@@ -56,3 +56,20 @@ fruits = []
 occupations = [:]
 let emptyArray: [String] = []
 let emptyDictionary: [String: Float] = [:]
+
+let individualScores: [Int] = [75, 43, 103, 87, 12]
+var teamScore: Int = 0
+for score: Int in individualScores {
+    if score > 50 {
+        teamScore += 3
+    } else {
+        teamScore += 1
+    }
+}
+print(teamScore)
+let scoreDecoration: String = if teamScore > 10 {
+    "🎉"
+} else {
+    ""
+}
+print("Score: ", teamScore, scoreDecoration)
