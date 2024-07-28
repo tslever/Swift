@@ -168,3 +168,14 @@ repeat {
     m *= 2
 } while m < 0
 print(m)
+
+var total: Int = 0
+for i: Int in 0..<4 {
+    total += i
+}
+print(total)
+total = 0
+for i: Int in 0...4 {
+    total += i
+}
+print(total)
