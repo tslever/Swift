@@ -42,3 +42,17 @@ let quotation = """
 
     I still have \(apples + oranges) pieces of fruit.
     """
+
+var fruits: [String] = ["strawberries", "limes", "tangerines"]
+fruits[1] = "grapes"
+var occupations: [String: String] = [
+    "Malcom": "Captain",
+    "Kaylee": "Mechanic"
+]
+occupations["Jayne"] = "Public Relations"
+fruits.append("blueberries")
+print(fruits)
+fruits = []
+occupations = [:]
+let emptyArray: [String] = []
+let emptyDictionary: [String: Float] = [:]
