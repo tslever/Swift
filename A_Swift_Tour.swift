@@ -147,3 +147,24 @@ for (typeOfNumber, numbers) in interestingNumbers {
     }
 }
 print("The largest number was \(typeOfLargestNumber) \(largest).")
+
+var n: Int = 2
+while n < 100 {
+    n *= 2
+}
+print(n)
+var m: Int = 2
+repeat {
+    m *= 2
+} while m < 100
+print(m)
+n = 2
+while n < 0 {
+    n *= 2
+}
+print(n)
+m = 2
+repeat {
+    m *= 2
+} while m < 0
+print(m)
