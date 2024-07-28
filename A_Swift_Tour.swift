@@ -179,3 +179,17 @@ for i: Int in 0...4 {
     total += i
 }
 print(total)
+
+func greet(person: String, day: String) -> String {
+    return "Hello \(person), today is \(day)."
+}
+print(greet(person: "Bob", day: "Tuesday"))
+func greet(person: String, todays_lunch_special: String) -> String {
+    return "Hello \(person), today's lunch special is \(todays_lunch_special)."
+}
+print(greet(person: "Bob", todays_lunch_special: "Green Eggs and Ham"))
+func greet(_ person: String, on day: String) -> String {
+    return "Hello \(person), today is \(day)."
+}
+print(greet(person: "Bob", day: "Tuesday"))
+print(greet("John", on: "Wednesday"))
